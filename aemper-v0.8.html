@@ -1,0 +1,200 @@
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+AEMPER V0.8
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+<!---------------------------------------------------------------------------------------------------
+
+shortcuts
+
+---------------------------------------------------------------------------------------------------->
+<style type="text/css">
+    body{
+        font-family: HelveticaNeue, sans-serif !important;
+        color: #222 !important;
+        margin: 0;
+        overflow-x: hidden !important;
+        font-size: 18px !important;
+    }
+    input[type="text"] {
+        width: 100% !important;
+    }
+    .underline{
+        text-decoration: underline !important;
+    }
+
+    :root {
+        --color1: #f3f3f3;
+        --color2: #d6d6d6;
+        --color3: #e71316;
+        --color4: #1e8ae7;
+    }
+    .color1{ color: #f3f3f3 !important; }
+    .color2{ color: #d6d6d6 !important; }
+    .color3{ color: #e71316 !important; }
+    .color4{ color: #1e8ae7 !important; }
+
+    .align-vertical{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .align-center{
+        text-align: center;
+    }
+
+    .clear10x{ height: 10px; }
+    .clear20x{ height: 20px; }
+    .clear30x{ height: 30px; }
+    .clear40x{ height: 40px; }
+    .clear50x{ height: 50px; }
+    .clear60x{ height: 60px; }
+    .clear70x{ height: 70px; }
+
+    @media (orientation: portrait) {
+
+    }
+</style>
+
+<!---------------------------------------------------------------------------------------------------
+
+grids
+
+---------------------------------------------------------------------------------------------------->
+<style type="text/css">
+    .aemper-grid{
+        display: flex;
+        column-gap: 40px;
+    }
+    .aemper-grid div{
+        width: 100%;
+    }
+    .aemper-grid div img{
+        width: 100%;
+    }
+    @media (orientation: portrait) {
+        .aemper-grid{
+            display: block;
+        }
+    }
+</style>
+
+<!---------------------------------------------------------------------------------------------------
+
+titles
+
+---------------------------------------------------------------------------------------------------->
+<style type="text/css">
+    .title-1{
+        font-size: 30px !important;
+        font-weight: 200 !important;
+        color: #444 !important;
+        text-decoration: none;
+        transition: color 0.5s ease-in-out;
+    }
+    .title-2{
+        font-size: 22px !important;
+        font-weight: 200 !important;
+        color: #444 !important;
+        text-decoration: none;
+        transition: color 0.5s ease-in-out;
+    }
+    .title-3{
+        font-size: 18px !important;
+        font-weight: 200 !important;
+        color: #444;
+        text-decoration: none;
+        transition: color 0.5s ease-in-out;
+    }
+    @media (orientation: portrait) {
+        .title-1{ font-size: 26px !important; }
+        .title-2{ font-size: 18px !important: }
+    }
+</style>
+
+<!---------------------------------------------------------------------------------------------------
+
+buttons
+
+---------------------------------------------------------------------------------------------------->
+<style type="text/css">
+    .button-1{
+        border-radius: 5px;
+        display: inline-block;
+        background-color: #e71316;
+        padding: 10px;
+        color: white !important;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500px;
+        transition: background-color 0.5s ease-in-out;
+    }
+    .button-1:hover{
+        color: wheat;
+        background-color: darkblue;
+    }
+
+    .button-2{
+        border-radius: 5px;
+        display: inline-block;
+        background-color: #ffffff;
+        padding: 10px;
+        color: #1e8ae7 !important;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500px;
+        transition: background-color 0.5s ease-in-out;
+    }
+    .button-2:hover{
+        color: white !important;
+        background-color: darkblue;
+    }
+</style>
+
+<!---------------------------------------------------------------------------------------------------
+
+links
+
+---------------------------------------------------------------------------------------------------->
+<style type="text/css">
+    .link-1{
+        font-size: 16px !important;
+        color: #1e8ae7 !important;
+        text-decoration: underline;
+    }
+    .link-1:hover{ color: #ccc !important; }
+</style>
+
+<!---------------------------------------------------------------------------------------------------
+
+reset
+
+---------------------------------------------------------------------------------------------------->
+<style type="text/css"> h1, h2, h3, h4, h5, h6 {margin-block-start: 0;margin-block-end: 0;margin-inline-start: 0;margin-inline-end: 0;font-weight: normal;line-height: 1;}p {display: block;margin-block-start: 0;margin-block-end: 0;margin-inline-start: 0;margin-inline-end: 0;line-height: 1.2;}small {display: block;margin-block-start: 0;margin-block-end: 0;margin-inline-start: 0;margin-inline-end: 0;}strong {margin-block-start: 0;margin-block-end: 0;margin-inline-start: 0;margin-inline-end: 0;}a {transition: color 0.5s ease-in-out;text-decoration: underline;cursor: pointer;line-height: 1.2;}a:hover {color: var(--c3);}button {border: 0;text-decoration: none;cursor: pointer;}ul {margin-block-start: 0;margin-block-end: 0;margin-inline-start: 0;margin-inline-end: 0;padding-inline-start: 0;}hr {display: block;unicode-bidi: isolate;margin-block-start: 0.5em;margin-block-end: 0.5em;margin-inline-start: auto;margin-inline-end: auto;overflow: hidden;border-style: none;border-width: 0;}</style>
+
+<!---------------------------------------------------------------------------------------------------
+
+autoscroll
+
+---------------------------------------------------------------------------------------------------->
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("a[href^='#']").forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 120,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    });
+</script>
