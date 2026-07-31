@@ -5,9 +5,10 @@ This repo is focused on a temporary/auxiliary Design System for AEM pages. This 
 ## In use
 biosystem.html v1.2
 
-### Reports 
+## Reports 
+#### These are older design system versions that may still be in use:
 - aemper-v0.1.html (deprecated)
 - aemper-v0.5.html (deprecated)
+- aemper-v0.8.html (deprecated)
 - aemper-v1-mini.html (deprecated)
-- biosystem-v0.5.html (updated)
 
